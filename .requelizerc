@@ -1,0 +1,35 @@
+const path = require('path');
+require("dotenv").config();
+
+// if (process.env.NODE_ENV == 'dev') {
+//     module.exports = {
+//         // 'config': path.resolve('src/config', 'database.js'),
+//         // 'models-path': path.resolve('src/db', 'models'),
+//         // 'seeders-path': path.resolve('src/db', 'seeders'),
+//         // 'migrations-path': path.resolve('src/db', 'migrations'),
+
+//         // 'config': path.resolve('src', 'config'),
+//         // 'migrations-path': path.resolve('src', 'migrations'),
+//         // 'models-path': path.resolve('src', 'models'),
+//         // 'seeders-path': path.resolve('src', 'seeders')
+
+//         'config': path.resolve('src/config', 'config.js'),
+//         'migrations-path': path.resolve('src/migrations'),
+//         'seeders-path': path.resolve('src/seeders'),
+//         'models-path': path.resolve('src/models')
+//     }
+// } else {
+//     module.exports = {
+//         'config': path.resolve('build/config', 'database.js'),
+//         'models-path': path.resolve('build/db', 'models'),
+//         'seeders-path': path.resolve('build/db', 'seeders'),
+//         'migrations-path': path.resolve('build/db', 'migrations')
+//     }
+// }
+
+module.exports = {
+    'config': path.resolve('config', 'database.json'),
+    'models-path': path.resolve('db', 'models'),
+    'seeders-path': path.resolve('db', 'seeders'),
+    'migrations-path': path.resolve('db', 'migrations')
+};
